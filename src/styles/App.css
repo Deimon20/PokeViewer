@@ -6,6 +6,14 @@
     margin: 0;
 }
 
+:root{
+    color-scheme: light dark;
+}
+
+body{
+    background-color: light-dark(#adadad, #161726);
+}
+
 .pk-wrapper{
     position: relative;
     min-height: 100dvh;
@@ -18,11 +26,28 @@
     padding: .25rem;
 }
 
-
-.pk-gen-selector{
-    padding: .25rem;
-    width: 100px;
-    height: 50px;
-    cursor: pointer;
+.pk-gen-selector__layout{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .75rem;
 }
+
+
+
+.pk-gen-selector__layout img{
+    width: 100%;
+    filter: contrast(30%);
+    transition: filter 250ms ease;
+    cursor: pointer;
+    &:hover{
+        filter: contrast(60%);
+    }
+}
+
+.pk-gen-selector__layout img.selected{
+    filter: contrast(100%);
+}
+
+
+
 
