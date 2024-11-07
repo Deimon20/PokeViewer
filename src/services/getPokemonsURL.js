@@ -30,7 +30,7 @@ export async function getPokemonsURL(genList){
         })
     )
 
-    genResults = await genResponse.filter(res => res !== undefined).map(result => {
+    genResults =  genResponse.filter(res => res !== undefined).map(result => {
         return result.results.map(pokemon => pokemon.url)
     })
 

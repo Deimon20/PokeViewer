@@ -15,11 +15,8 @@ body{
 }
 
 .pk-wrapper{
-    position: relative;
     min-height: 100dvh;
-    display: grid;
-    place-content: center;
-    grid-template-rows: repeat(2,100px) 1fr;
+    width: 100%;
 }
 
 .pk-logo{
@@ -27,9 +24,12 @@ body{
 }
 
 .pk-gen-selector__layout{
+    padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(100px,150px));
+    min-width: 320px;
     gap: .75rem;
+    justify-content: center;
 }
 
 
@@ -46,6 +46,16 @@ body{
 
 .pk-gen-selector__layout img.selected{
     filter: contrast(100%);
+}
+
+.pk-display__layout{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.pk-display__layout img{
+    width: 100%;
 }
 
 
